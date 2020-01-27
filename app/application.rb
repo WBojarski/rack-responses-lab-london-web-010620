@@ -5,9 +5,9 @@ class Application
         resp = Rack::Response.new
         
 
-        if Time.now.strftime('%H:%M') < "12:00"
+        if Time.now.hour < 12
             resp.write "Good Morning!"
-        elsif Time.now.strftime('%H:%M'). > "12:00"
+        elsif Time.now.hour > 12
             resp.write "Good Afternoon!"
 
         
